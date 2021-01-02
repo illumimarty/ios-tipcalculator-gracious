@@ -27,6 +27,7 @@ class SettingsViewController: UIViewController {
         // This is a good place to retrieve the default tip percentage from UserDefaults
         // and use it to update the tip amount
         let defaults = UserDefaults.standard
+        tipControl.selectedSegmentIndex = defaults.integer(forKey: "tipControlIndex")
         defaults.synchronize()
     
     }
@@ -37,6 +38,7 @@ class SettingsViewController: UIViewController {
 
         let tipPercentages = [0.15, 0.18, 0.2]
         defaults.set(tipPercentages[tipControl.selectedSegmentIndex], forKey: "tipPercentage")
+        defaults.set(tipControl.selectedSegmentIndex, forKey: "tipControlIndex")
         defaults.synchronize()
     }
     
