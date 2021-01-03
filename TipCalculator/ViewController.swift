@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         defaults.set(0.15, forKey: "tipPercentage")
         defaults.synchronize()
         
-        self.tipOutput.alpha = 1
+        self.tipOutput.alpha = 0
         
 
         
@@ -32,9 +32,6 @@ class ViewController: UIViewController {
     }
     @IBAction func onTap(_ sender: Any) {
         print("Hello world")
-        
-        
-        
         view.endEditing(true);
     }
     
@@ -53,6 +50,7 @@ class ViewController: UIViewController {
         } else {
             print("text field now has text")
 
+            tipPercentageLabel.text = "boom"
             UIView.animate(withDuration: 0.35, animations: {
                 self.tipOutput.frame = CGRect(x: 0, y: 233, width: 375, height:  434)
                 self.tipOutput.alpha = 1
@@ -66,8 +64,8 @@ class ViewController: UIViewController {
         let tip = bill * tipPercentage
         let total = bill + tip
         // Update the tip and total labels
-        tipPercentageLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        tipPercentageLabel.text = String(format: "$ %.2f", tip)
+        totalLabel.text = String(format: "$% .2f", total)
     }
     
     override func viewWillAppear(_ animated: Bool) {
