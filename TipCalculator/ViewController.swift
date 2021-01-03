@@ -12,31 +12,54 @@ class ViewController: UIViewController {
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var tipOutput: UIView!
     var tipPercentage: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "Tip Calculator"
+        self.title = "Gracious"
         
         let defaults = UserDefaults.standard
         defaults.set(0.15, forKey: "tipPercentage")
         defaults.synchronize()
+        
+        self.tipOutput.alpha = 1
+        
+
+        
+        
     }
     @IBAction func onTap(_ sender: Any) {
         print("Hello world")
+        
+        
         
         view.endEditing(true);
     }
     
     @IBAction func calculateTip(_ sender: Any) {
         
-        //let defaults = UserDefaults.standard
         // Get the bill amount
         let bill = Double(billAmountTextField.text!) ?? 0
-        // let tipPercentages = [0.15, 0.18, 0.2]
         
-        
+        if billAmountTextField.text?.isEmpty ?? true {
+            print("text field is empty")
+            UIView.animate(withDuration: 0.35, animations: {
+                self.tipOutput.frame = CGRect(x: 0, y: 467, width: 375, height:  200)
+                self.tipOutput.alpha = 0
+                self.billAmountTextField.frame = CGRect(x: 179, y: 229, width: 159.0, height: 67)
+            })
+        } else {
+            print("text field now has text")
+
+            UIView.animate(withDuration: 0.35, animations: {
+                self.tipOutput.frame = CGRect(x: 0, y: 233, width: 375, height:  434)
+                self.tipOutput.alpha = 1
+                
+                self.billAmountTextField.frame = CGRect(x: 183, y: 106, width: 159.0, height: 67.0)
+            })
+        }
         
         // Calculate the tip and total
         

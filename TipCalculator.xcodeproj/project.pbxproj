@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		990FB37C259043D10039BFAB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FB37B259043D10039BFAB /* SettingsViewController.swift */; };
+		999F560925A177F400F5A456 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 999F560825A177F400F5A456 /* RobotoCondensed-Light.ttf */; };
 		99DC5605256E64A2004B9FCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC5604256E64A2004B9FCA /* AppDelegate.swift */; };
 		99DC5607256E64A2004B9FCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC5606256E64A2004B9FCA /* SceneDelegate.swift */; };
 		99DC5609256E64A2004B9FCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC5608256E64A2004B9FCA /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		990FB37B259043D10039BFAB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		999F560825A177F400F5A456 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Light.ttf"; path = "../../../../../Desktop/Resources/RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		99DC5601256E64A2004B9FCA /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DC5604256E64A2004B9FCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99DC5606256E64A2004B9FCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		999F560725A177B500F5A456 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				999F560825A177F400F5A456 /* RobotoCondensed-Light.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		99DC55F8256E64A2004B9FCA = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 				99DC560D256E64A5004B9FCA /* Assets.xcassets */,
 				99DC560F256E64A5004B9FCA /* LaunchScreen.storyboard */,
 				99DC5612256E64A5004B9FCA /* Info.plist */,
+				999F560725A177B500F5A456 /* Resources */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";
@@ -236,6 +247,7 @@
 			files = (
 				99DC5611256E64A5004B9FCA /* LaunchScreen.storyboard in Resources */,
 				99DC560E256E64A5004B9FCA /* Assets.xcassets in Resources */,
+				999F560925A177F400F5A456 /* RobotoCondensed-Light.ttf in Resources */,
 				99DC560C256E64A2004B9FCA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,7 +463,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Codepath.TipCalculatorMDRN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -471,7 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Codepath.TipCalculatorMDRN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
