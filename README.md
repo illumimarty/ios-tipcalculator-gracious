@@ -4,7 +4,7 @@
 
 Submitted by: **Marthen Dominic Nodado**
 
-Time spent: **~9** hours spent in total
+Time spent: **~11** hours spent in total
 
 ## User Stories
 
@@ -23,6 +23,8 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [x] Settings Page
+- [x] Dark Mode Support 
+- [x] Grand Total Splitting (up to parties of 4)
 
 ## Video Walkthrough
 
