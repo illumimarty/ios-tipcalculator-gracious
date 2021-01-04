@@ -29,6 +29,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of the app's features:
+
 ![](https://i.imgur.com/tuYJMfB.gif)
 
 GIF created with [ezGIF](https://ezgif.com/).
