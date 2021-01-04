@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipOutput: UIView!
     @IBOutlet weak var tipPercentageRef: UILabel!
+    @IBOutlet weak var partyOf2: UILabel!
+    @IBOutlet weak var partyOf3: UILabel!
+    @IBOutlet weak var partyOf4: UILabel!
+    
     var tipPercentage: Double = 0.0
     var isDarkMode: Bool = false
     
@@ -21,6 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Gracious"
+        
         
         let defaults = UserDefaults.standard
         defaults.set(0.15, forKey: "tipPercentage")
@@ -87,6 +92,18 @@ class ViewController: UIViewController {
         // Update the tip and total labels
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        partyOf2.text = String(format: "$%.2f", total / 2)
+        partyOf2.font = partyOf2.font.withSize(40)
+        
+        partyOf3.text = String(format: "$%.2f", total / 3)
+        partyOf3.font = partyOf2.font.withSize(35)
+
+        
+        partyOf4.text = String(format: "$%.2f", total / 4)
+        partyOf4.font = partyOf2.font.withSize(30)
+
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
