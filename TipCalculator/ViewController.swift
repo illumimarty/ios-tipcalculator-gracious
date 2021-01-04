@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipOutput: UIView!
     @IBOutlet weak var tipPercentageRef: UILabel!
     var tipPercentage: Double = 0.0
+    var isDarkMode: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +28,28 @@ class ViewController: UIViewController {
         
         self.tipOutput.alpha = 0
         
-
         
-        
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            view.backgroundColor = .tertiarySystemBackground
+            
+            break;
+        case .light, .unspecified:
+            // 88 176 121
+            view.backgroundColor = UIColor(red: 216/255, green: 252/255, blue: 226/255, alpha: 1)
+            break;
+        default:
+            print("Error: unspecified UIStyle")
+        }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+            // Trait collection has already changed
+        if (traitCollection.userInterfaceStyle == .dark) {
+            view.backgroundColor = .tertiarySystemBackground
+        } else {
+            view.backgroundColor = UIColor(red: 216/255, green: 252/255, blue: 226/255, alpha: 1)
+        }
     }
     @IBAction func onTap(_ sender: Any) {
         print("Hello world")
@@ -81,6 +101,8 @@ class ViewController: UIViewController {
         defaults.synchronize()
 
         calculateTip((Any).self)
+        
+
     }
 
     override func viewDidAppear(_ animated: Bool) {

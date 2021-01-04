@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		990FB37C259043D10039BFAB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FB37B259043D10039BFAB /* SettingsViewController.swift */; };
 		999F560925A177F400F5A456 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 999F560825A177F400F5A456 /* RobotoCondensed-Light.ttf */; };
+		999F563D25A2B54400F5A456 /* gracious-appicon-original.png in Resources */ = {isa = PBXBuildFile; fileRef = 999F563C25A2B54400F5A456 /* gracious-appicon-original.png */; };
 		99DC5605256E64A2004B9FCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC5604256E64A2004B9FCA /* AppDelegate.swift */; };
 		99DC5607256E64A2004B9FCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC5606256E64A2004B9FCA /* SceneDelegate.swift */; };
 		99DC5609256E64A2004B9FCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC5608256E64A2004B9FCA /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		990FB37B259043D10039BFAB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		999F560825A177F400F5A456 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Light.ttf"; path = "../../../../../Desktop/Resources/RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		999F563C25A2B54400F5A456 /* gracious-appicon-original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gracious-appicon-original.png"; sourceTree = "<group>"; };
 		99DC5601256E64A2004B9FCA /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DC5604256E64A2004B9FCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99DC5606256E64A2004B9FCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		999F560725A177B500F5A456 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				999F563C25A2B54400F5A456 /* gracious-appicon-original.png */,
 				999F560825A177F400F5A456 /* RobotoCondensed-Light.ttf */,
 			);
 			path = Resources;
@@ -247,6 +250,7 @@
 			files = (
 				99DC5611256E64A5004B9FCA /* LaunchScreen.storyboard in Resources */,
 				99DC560E256E64A5004B9FCA /* Assets.xcassets in Resources */,
+				999F563D25A2B54400F5A456 /* gracious-appicon-original.png in Resources */,
 				999F560925A177F400F5A456 /* RobotoCondensed-Light.ttf in Resources */,
 				99DC560C256E64A2004B9FCA /* Main.storyboard in Resources */,
 			);

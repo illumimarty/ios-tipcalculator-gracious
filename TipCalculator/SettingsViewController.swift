@@ -18,6 +18,27 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = "Settings"
         
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            view.backgroundColor = .tertiarySystemBackground
+            
+            break;
+        case .light, .unspecified:
+            // 88 176 121
+            view.backgroundColor = UIColor(red: 216/255, green: 252/255, blue: 226/255, alpha: 1)
+            break;
+        default:
+            print("Error: unspecified UIStyle")
+        }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+            // Trait collection has already changed
+        if (traitCollection.userInterfaceStyle == .dark) {
+            view.backgroundColor = .tertiarySystemBackground
+        } else {
+            view.backgroundColor = UIColor(red: 216/255, green: 252/255, blue: 226/255, alpha: 1)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
