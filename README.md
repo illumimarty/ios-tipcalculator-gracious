@@ -1,6 +1,6 @@
-# Pre-work - *Tip Calculator*
+# Pre-work - *Gracious*
 
-**TipCalculator** is a tip calculator application for iOS.
+**Gracious** is a tip calculator application for iOS.
 
 Submitted by: **Marthen Dominic Nodado**
 
@@ -28,16 +28,17 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of the app's features:
+![](https://i.imgur.com/tuYJMfB.gif)
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [ezGIF](https://ezgif.com/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+* As a native C++ programmer, learning the syntax and OOP handling was the biggest challenge
 * Creating the settings page and tinkering with with ViewController features
+
 
 ## License
 
