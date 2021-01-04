@@ -61,12 +61,12 @@ class ViewController: UIViewController {
         // Get the bill amount
         let bill = Double(billAmountTextField.text!) ?? 0
         
-        if billAmountTextField.text?.isEmpty ?? true {
+        if billAmountTextField.text?.isEmpty ?? true || bill == 0{
             print("text field is empty")
             UIView.animate(withDuration: 0.35, animations: {
                 self.tipOutput.frame = CGRect(x: 0, y: 467, width: 375, height:  200)
                 self.tipOutput.alpha = 0
-                self.billAmountTextField.frame = CGRect(x: 179, y: 229, width: 159.0, height: 67)
+//                self.billAmountTextField.frame = CGRect(x: 179, y: 229, width: 159.0, height: 67)
             })
         } else {
             print("text field now has text")
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
                 self.tipOutput.frame = CGRect(x: 0, y: 304, width: 375, height:  363)
                 self.tipOutput.alpha = 1
                 
-                self.billAmountTextField.frame = CGRect(x: 183, y: 106, width: 159.0, height: 67.0)
+//                self.billAmountTextField.frame = CGRect(x: 183, y: 106, width: 159.0, height: 67.0)
             })
         }
         
