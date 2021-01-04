@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipOutput: UIView!
+    @IBOutlet weak var tipPercentageRef: UILabel!
     var tipPercentage: Double = 0.0
     
     override func viewDidLoad() {
@@ -50,9 +51,9 @@ class ViewController: UIViewController {
         } else {
             print("text field now has text")
 
-            tipPercentageLabel.text = "boom"
+            tipPercentageRef.text = #"+ \#(Int(tipPercentage * 100))%"#
             UIView.animate(withDuration: 0.35, animations: {
-                self.tipOutput.frame = CGRect(x: 0, y: 233, width: 375, height:  434)
+                self.tipOutput.frame = CGRect(x: 0, y: 304, width: 375, height:  363)
                 self.tipOutput.alpha = 1
                 
                 self.billAmountTextField.frame = CGRect(x: 183, y: 106, width: 159.0, height: 67.0)
@@ -64,8 +65,8 @@ class ViewController: UIViewController {
         let tip = bill * tipPercentage
         let total = bill + tip
         // Update the tip and total labels
-        tipPercentageLabel.text = String(format: "$ %.2f", tip)
-        totalLabel.text = String(format: "$% .2f", total)
+        tipPercentageLabel.text = String(format: "$%.2f", tip)
+        totalLabel.text = String(format: "$%.2f", total)
     }
     
     override func viewWillAppear(_ animated: Bool) {
