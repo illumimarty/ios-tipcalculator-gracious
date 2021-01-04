@@ -18,22 +18,21 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = "Settings"
         
+        // Dark Mode Feature
         switch traitCollection.userInterfaceStyle {
-        case .dark:
-            view.backgroundColor = .tertiarySystemBackground
-            
-            break;
-        case .light, .unspecified:
-            // 88 176 121
-            view.backgroundColor = UIColor(red: 216/255, green: 252/255, blue: 226/255, alpha: 1)
-            break;
-        default:
-            print("Error: unspecified UIStyle")
+            case .dark:
+                view.backgroundColor = .tertiarySystemBackground
+                break;
+            case .light, .unspecified:
+                view.backgroundColor = UIColor(red: 216/255, green: 252/255, blue: 226/255, alpha: 1)
+                break;
+            default:
+                print("Error: unspecified UIStyle")
         }
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-            // Trait collection has already changed
+        // Trait collection has already changed
         if (traitCollection.userInterfaceStyle == .dark) {
             view.backgroundColor = .tertiarySystemBackground
         } else {
@@ -47,29 +46,26 @@ class SettingsViewController: UIViewController {
     
         // This is a good place to retrieve the default tip percentage from UserDefaults
         // and use it to update the tip amount
+        
+        // Checks if settingVC tip percent is same as mainVC
         let defaults = UserDefaults.standard
-
         if (defaults.double(forKey: "tipPercentage") != tipPercentages[tipControl.selectedSegmentIndex]) {
-            
             tipControl.selectedSegmentIndex = defaults.integer(forKey: "tipControlIndex")
-
         }
         defaults.synchronize()
-    
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("view will disappear")
+        
+        // saves tip percentage to defaults
         let defaults = UserDefaults.standard
-
         defaults.set(tipPercentages[tipControl.selectedSegmentIndex], forKey: "tipPercentage")
         defaults.set(tipControl.selectedSegmentIndex, forKey: "tipControlIndex")
         defaults.synchronize()
     }
     
-    
-    
-
     /*
     // MARK: - Navigation
 
